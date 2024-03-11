@@ -176,7 +176,47 @@ Can be used to update the user. Accepts the user id as a url path parameter and 
 }
 ```
 
-# Production App 
-This application is hosted at https://hammerhead-app-9ymyo.ondigitalocean.app/
+# Production App
+
+This application is hosted at https://hammerhead-app-9ymyo.ondigitalocean.app/. Here is a suggested workflow:
+
+1. Create a new account with a balance of $99
+```
+cURL -X POST -d '{"accountBalance": 99}' -H "Content-Type: application/json" https://hammerhead-app-9ymyo.ondigitalocean.app/api/account
+```
+Send a get request to ensure your account was created (note you will have to find your account in a list of accounts)
+```
+curl https://hammerhead-app-9ymyo.ondigitalocean.app/api/account
+```
+
+2. The server response from the curl command in step 1 will include the account id in the id field. Take note of this id.
+
+Create a new user and link them to the account created in step 1 using the account id. Note we are not including the optional address fields in our request.
+
+```
+cURL -X POST -d '{"firstName": "Tom","lastName": "Haverford","dob": "15/02/1984","accountIds": [<Account id from Step 1 as a string>]}' -H "Content-Type: application/json" https://hammerhead-app-9ymyo.ondigitalocean.app/api/user
+```
+Take note of the user id. Send a get request to ensure your user was created (note you will have to find your account in a list of accounts)
+```
+curl https://hammerhead-app-9ymyo.ondigitalocean.app/api/account
+```
+3. Create a second account with a balance of 5$ and take note if the account id.
+```
+cURL -X POST -d '{"accountBalance": 5}' -H "Content-Type: application/json" https://hammerhead-app-9ymyo.ondigitalocean.app/api/account
+```
+4. Create a transaction that sends 20$ from the first account to the second
+ ```
+cURL -X POST -d '{"amount": 20,"senderUserId": "<user id from step 2>","senderAccountId": "<account id from step 1>","recipientAccountId": "<account id from step 3>"}' -H "Content-Type: application/json" https://hammerhead-app-9ymyo.ondigitalocean.app/api/transaction
+```
+This transaction sends 20$ from the first account we created to the second.
+
+5. Verify that 20$ was taken from the first account (the new balance should be 79$) 
+```
+curl https://hammerhead-app-9ymyo.ondigitalocean.app/api/account/<account id from step 1>
+```
+Verify that 20$ was added to the second account (the new balance should be 25$)
+```
+curl https://hammerhead-app-9ymyo.ondigitalocean.app/api/account/<account id from step 3>
+```
 
   

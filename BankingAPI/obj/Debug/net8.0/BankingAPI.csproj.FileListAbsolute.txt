@@ -265,3 +265,4 @@
 /Users/natalie/Desktop/BankingAPI/BankingAPI/bin/Debug/net8.0/runtimes/linux/native/libmongocrypt.so
 /Users/natalie/Desktop/BankingAPI/BankingAPI/bin/Debug/net8.0/runtimes/osx/native/libmongocrypt.dylib
 /Users/natalie/Desktop/BankingAPI/BankingAPI/bin/Debug/net8.0/runtimes/win/native/mongocrypt.dll
+/Users/natalie/Desktop/BankingAPI/BankingAPI/obj/Debug/net8.0/BankingAPI.sourcelink.json

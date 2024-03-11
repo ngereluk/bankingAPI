@@ -265,3 +265,4 @@
 /Users/natalie/Desktop/BankingAPI/BankingAPI/obj/Release/net8.0/BankingAPI.pdb
 /Users/natalie/Desktop/BankingAPI/BankingAPI/obj/Release/net8.0/BankingAPI.genruntimeconfig.cache
 /Users/natalie/Desktop/BankingAPI/BankingAPI/obj/Release/net8.0/ref/BankingAPI.dll
+/Users/natalie/Desktop/BankingAPI/BankingAPI/obj/Release/net8.0/BankingAPI.sourcelink.json

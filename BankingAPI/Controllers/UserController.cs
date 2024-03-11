@@ -41,6 +41,7 @@ public class UserController : ControllerBase
             City = newUser.City,
             Province = newUser.Province,
             DOB = newUser.DOB,
+            AccountIds = newUser.AccountIds,
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };

@@ -3,7 +3,7 @@
 
   
 
-The world's most basic bank. You can setup an account, a user, link an account to a user and send money between accounts.
+The world's most basic bank. You can setup an account, a user, link an account to a user and send money between accounts. If youre're interested in trying out the API, scroll halfway down to see a suggested workflow of cURL commands.
 
   
 

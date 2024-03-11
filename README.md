@@ -138,7 +138,7 @@ Creates a new account. Accepts a body:
 ```
 ### GET /api/user/{id}
 Gets a single user object by id. Returns the user object:
-```json
+```
 {
   "id": "string",
   "firstName": "string",
@@ -160,7 +160,7 @@ Gets a single user object by id. Returns the user object:
 ```
 ### PUT /api/user/{id}
 Can be used to update the user. Accepts the user id as a url path parameter and the following in the request body:
-```json
+```
 {
   "firstName": "string",
   "lastName": "string",
@@ -173,6 +173,7 @@ Can be used to update the user. Accepts the user id as a url path parameter and 
   "accountIds": [
     "string"
   ]
+}
 ```
 
 # Production App 

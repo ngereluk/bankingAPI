@@ -178,7 +178,7 @@ Can be used to update the user. Accepts the user id as a url path parameter and 
 
 # Production App
 
-This application is hosted at https://hammerhead-app-9ymyo.ondigitalocean.app/. Here is a suggested workflow:
+~This application is hosted at https://hammerhead-app-9ymyo.ondigitalocean.app/.~. This app is no longer hosted. Here is a suggested workflow:
 
 1. Create a new account with a balance of $99
 ```
